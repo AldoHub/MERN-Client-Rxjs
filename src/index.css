@@ -1,0 +1,309 @@
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background: rgb(36, 36, 36);
+  overflow-x: hidden;
+  font-family: "Poppins";
+  color: #eee;
+  padding-bottom: 120px;
+}
+
+.banner {
+  height: 600px;
+  background: url("https://images.unsplash.com/photo-1572181157878-0a449a7f0bc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80")center;
+  background-size: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+header {
+  position: relative;
+  height: 100px;
+}
+
+header h1 {
+  font-size: 90px;
+  margin-top: 200px;
+  line-height: 90px;
+  color: #eee;
+  text-align: center;
+  text-transform: uppercase;
+  
+}
+
+nav, header, main {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: #444;
+  font-size: 13px;
+}
+
+nav ul:first-of-type li a {
+  font-size: 20px;
+  text-transform: lowercase;
+  font-weight: bold;
+}
+
+nav ul:last-of-type li a {
+  border: 1px solid rgb(223, 223, 223);
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-right: 20px;
+  color: rgb(243, 243, 243);
+}
+
+ul {
+  list-style: none;
+}
+
+.posts {
+  width: 90%;
+  margin: 180px auto;
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+}
+
+.post {
+  width: 30%;
+  min-width: 300px;
+  margin: 10px;
+  max-height: 400px;
+  
+}
+
+.post a > .cover {
+  height: 400px;
+  background-size: cover !important;
+  background-position: center;
+  border-radius: 10px;
+}
+
+
+.editPanel {
+  overflow-y: scroll;
+  background: rgba(20, 20, 20, 0.9);
+  z-index: 2;
+  display: block;
+  height:100vh;
+  top: 0px;
+  text-align: center;
+  color: #eee;
+  position: fixed;
+  width: 100%;
+  margin: 0% auto; /* Will not center vertically and won't work in IE6/7. */
+  left: 0;
+  right: 0;
+  
+}
+
+.editPanel form, form {
+  text-align: left;
+  width: 50%;
+  margin: 0 auto;
+  padding: 120px 0px;
+}
+
+.editPanel form *, form * {
+  display: block;
+  width: 100%;
+
+}
+
+
+.editPanel form input, .editPanel form textarea,  form input,  form textarea{
+  margin-bottom: 20px;
+  border: none;
+  background: none;
+  
+}
+
+.editPanel form input[type="text"], .editPanel form textarea, form input[type="text"], form textarea{
+  background: #eee;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.editPanel form textarea {
+  height: 300px;
+  font-family: "Poppins";
+  resize: none;
+}
+button {
+  cursor: pointer;
+}
+
+.panelButton, .delete {
+  border: none;
+  background: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  
+  }
+  
+  .delete {
+  background: rgba(209, 209, 209, 0.9);
+  margin-top: 400px;
+  margin-bottom: 40px;
+  color: #222;
+  }
+  
+  .panelButton {   
+  background: rgba(236, 193, 1, 0.9); 
+  font-weight: bold;
+  color: #eee;
+  margin-top: 40px;
+  }
+  
+  .editPanel label, .editPanel p {
+    color: #ddd;
+  }
+
+
+
+  .postContainer {
+    margin-top: 120px;
+    margin-bottom: 120px;;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .postContainer img {
+    width: 100%;
+    max-width: 500px;
+    margin-right: 40px;;
+  }
+  
+  .postContainer .content {
+    width: 40%;
+  }
+  
+  .loaderContainer{
+    text-align: center;
+    margin-top: 40vh;
+  }
+
+form input[type="submit"]{
+  background: rgb(129, 76, 253);
+width: 70%;
+max-width: 400px;
+padding: 10px;
+border: none;
+border-radius: 15px;
+color: #d6d6d6;
+font-weight: bold;
+margin: 40px auto;
+cursor: pointer;
+}
+
+
+.page-item .page-link {
+  display: block;
+  background: rgb(252, 139, 94);
+  padding: 5px;
+  width: 30px;
+  color: #eee;
+  height: 30px;
+  border-radius: 4px;
+  text-align: center;  
+  margin: 10px;
+}
+
+.pagination {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-grid div {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: rgb(129, 76, 253);
+  animation: lds-grid 1.2s linear infinite;
+}
+.lds-grid div:nth-child(1) {
+  top: 6px;
+  left: 6px;
+  animation-delay: 0s;
+}
+.lds-grid div:nth-child(2) {
+  top: 6px;
+  left: 26px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(3) {
+  top: 6px;
+  left: 45px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(4) {
+  top: 26px;
+  left: 6px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(5) {
+  top: 26px;
+  left: 26px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(6) {
+  top: 26px;
+  left: 45px;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(7) {
+  top: 45px;
+  left: 6px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(8) {
+  top: 45px;
+  left: 26px;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(9) {
+  top: 45px;
+  left: 45px;
+  animation-delay: -1.6s;
+}
+@keyframes lds-grid {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
